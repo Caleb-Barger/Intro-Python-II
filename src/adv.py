@@ -58,37 +58,37 @@ while running:
     print(player.current_room.desc)
 
     valid_inputs = ['n', 's', 'e', 'w', 'q']
-    move_dir = None
-    while move_dir not in valid_inputs:
-        move_dir = input("> ").lower()
-        if move_dir not in valid_inputs:
+    user_input= None
+    while user_input not in valid_inputs:
+        user_input= input("> ").lower()
+        if user_input not in valid_inputs:
             print("not a valid move")
     
-    if move_dir == 'n':
+    if user_input== 'n':
         if not player.current_room.n_to == None:
             player.current_room = player.current_room.n_to
         else:
             print("Can't go that way try a diffrent direction")
             continue
-    if move_dir == 's':
+    if user_input== 's':
         if not player.current_room.s_to == None:
             player.current_room = player.current_room.s_to
         else:
             print("Can't go that way try a diffrent direction")
             continue
-    if move_dir == 'e':
+    if user_input== 'e':
         if not player.current_room.e_to == None:
             player.current_room = player.current_room.e_to
         else:
             print("Can't go that way try a diffrent direction")
             continue
-    if move_dir == 'w':
+    if user_input== 'w':
         if not player.current_room.w_to == None:
             player.current_room = player.current_room.w_to
         else:
             print("Can't go that way try a diffrent direction")
             continue
-    if move_dir == 'q':
+    if user_input== 'q':
         do_quit = input("are you sure y/n: ").lower()
         if (do_quit == 'y'):
             sys.exit()
